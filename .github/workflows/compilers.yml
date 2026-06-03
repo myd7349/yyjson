@@ -28,7 +28,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
     - name: Build and Test
       run: |
         mkdir build
@@ -43,9 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
     - name: Build and Test
-      uses: vmactions/freebsd-vm@v1
+      uses: vmactions/freebsd-vm@v1.4.5
       with:
         usesh: true
         run: |
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Install Dependencies
       run: |
@@ -102,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Install Dependencies
       run: |
@@ -140,7 +140,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Install GCC 4.8
       run: |
@@ -175,7 +175,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Set Up QEMU
       uses: docker/setup-qemu-action@v4
@@ -201,7 +201,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Set Up QEMU
       uses: docker/setup-qemu-action@v4
@@ -244,7 +244,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
     
     - name: Install Dependencies
       shell: bash
@@ -266,7 +266,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
       
     - name: Build and Test
       uses: addnab/docker-run-action@v3
@@ -287,7 +287,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
     - name: Build and Test
       run: |
         mkdir build
@@ -302,7 +302,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Install Wine
       run: |
@@ -346,7 +346,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Setup MSYS2
       uses: msys2/setup-msys2@v2
@@ -372,7 +372,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
     - name: Setup Cygwin
       uses: egor-tensin/setup-cygwin@v4
@@ -397,9 +397,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
 
-    - uses: open-watcom/setup-watcom@v0
+    - uses: open-watcom/setup-watcom@v1
       with:
         version: "2.0"
 
@@ -419,10 +419,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v6.0.2
       
     - name: Setup Emscripten
-      uses: mymindstorm/setup-emsdk@v14
+      uses: mymindstorm/setup-emsdk@v16
 
     - name: Build and Test
       run: |
